@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Heroku Demo</title>
+</head>
+
+<body>
+    {{#if login}}
+    <form action="./login" method="POST">
+        <label>Username</label>
+        <input placeholder="Enter Username" name="username">
+          <label>Passwaord</label>
+        <input placeholder="Enter Password" name="pass">
+        <button>Login</button>
+    </form>
+    <a href="/signup"><button>signup</button></a>
+    {{/if}}
+    {{#if signup}}
+    <form action="./signup" method="POST">
+        <label>Enter Name</label>
+        <input type="text" name="name">
+        <label>Username</label>
+        <input placeholder="Enter new Username" name="username">
+        <label>Password</label>
+        <input placeholder="Enter new Password" name="pass">
+        <label>Re-Enter Password</label>
+        <input placeholder="Enter Password again">
+        <button>Sign-Up</button>
+    </form>
+    {{/if}}
+    <p>{{message}}</p>
+</body>
+
+</html>
