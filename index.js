@@ -4,7 +4,7 @@ let mongoose = require("mongoose");
 let bodyParser = require('body-parser');
 const engines = require('consolidate');
 var hbs = require('handlebars');
-let port = 8080;
+let port = process.env.PORT || 80
 let user = require('./app/models/user')
 
 app.engine('hbs', engines.handlebars);
