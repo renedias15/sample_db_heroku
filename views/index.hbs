@@ -2,30 +2,33 @@
 
 <head>
     <title>Heroku Demo</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     {{#if login}}
+    <h3>Login</h3>
     <form action="./login" method="POST">
-        <label>Username</label>
-        <input placeholder="Enter Username" name="username">
-          <label>Passwaord</label>
-        <input placeholder="Enter Password" name="pass">
-        <button>Login</button>
+        <label>Email</label><br><br>
+        <input placeholder="Enter Username" name="email"><br><br>
+        <label>Password</label><br><br>
+        <input placeholder="Enter Password" name="pass"><br><br>
+        <button class="um">Login</button><br><br>
     </form>
-    <a href="/signup"><button>signup</button></a>
+    <a href="/signup"><button>Signup</button></a>
     {{/if}}
     {{#if signup}}
+    <h3>Register</h3>
     <form action="./signup" method="POST">
-        <label>Enter Name</label>
-        <input type="text" name="name">
-        <label>Username</label>
-        <input placeholder="Enter new Username" name="username">
-        <label>Password</label>
-        <input placeholder="Enter new Password" name="pass">
-        <label>Re-Enter Password</label>
-        <input placeholder="Enter Password again">
-        <button>Sign-Up</button>
+        <label>Enter Name</label><br><br>
+        <input type="text" name="name"><br><br>
+        <label>Email</label><br><br>
+        <input placeholder="Enter Your email" name="email"><br><br>
+        <label>Password</label><br><br>
+        <input placeholder="Enter new Password" name="pass"><br><br>
+        <label>Re-Enter Password</label><br><br>
+        <input placeholder="Enter Password again"><br><br>
+        <button class="um">Sign-Up</button>
     </form>
     {{/if}}
     <p>{{message}}</p>
